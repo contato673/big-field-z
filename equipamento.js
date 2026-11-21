@@ -56,6 +56,16 @@ function arrangeBackpack(panel,capacity,totalMass,itemMasses){
   equip.after(grid,actions);
   const heading=panel.querySelector('.ph small');
   if(heading)heading.textContent=rows.length+' / '+capacity+' espaços · '+totalMass;
+  // botão de fabricação: a mochila abre só com o inventário; a fabricação abre ao lado quando pedida
+  const bag=document.getElementById('bag'),ph=panel.querySelector('.ph');
+  if(bag&&ph&&!ph.querySelector('.craftToggle')){
+    const toggle=document.createElement('button');
+    toggle.type='button';toggle.className='craftToggle';
+    const label=()=>{toggle.textContent=bag.classList.contains('craftOpen')?'Fechar fabricação':'🔨 Fabricar'};
+    label();
+    toggle.onclick=e=>{e.stopPropagation();bag.classList.toggle('craftOpen');label()};
+    ph.querySelector('h3')?.after(toggle);
+  }
   for(let i=0;i<Math.max(rows.length,capacity);i++){
     const row=rows[i],cell=document.createElement(row?'button':'span');
     cell.className='packCell';
@@ -69,9 +79,11 @@ function arrangeBackpack(panel,capacity,totalMass,itemMasses){
     const buttons=row.querySelector('.bt');
     const description=row.querySelector('small')?.textContent;
     row.remove();
+    cell.dataset.name=name;
     cell.onclick=e=>{
-      e.stopPropagation();
+      e?.stopPropagation();
       const closing=cell.classList.contains('chosen');
+      arrangeBackpack.chosen=closing?null:{i,name};
       grid.querySelector('.chosen')?.classList.remove('chosen');
       actions.replaceChildren();actions.hidden=closing;
       if(closing)return;
@@ -80,6 +92,14 @@ function arrangeBackpack(panel,capacity,totalMass,itemMasses){
       actions.append(title);
       if(description){const note=document.createElement('small');note.textContent=description;actions.append(note)}
       if(buttons)actions.append(buttons);
+      actions.scrollIntoView({block:'nearest'});
     };
+  }
+  // a mochila se redesenha quando algo muda; mantém o item que estava selecionado
+  const keep=arrangeBackpack.chosen;
+  if(keep){
+    const cells=grid.querySelectorAll('button.packCell');
+    const again=(cells[keep.i]&&cells[keep.i].dataset.name===keep.name)?cells[keep.i]:[...cells].find(c=>c.dataset.name===keep.name);
+    if(again)again.onclick();else arrangeBackpack.chosen=null;
   }
 }
