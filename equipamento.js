@@ -22,7 +22,7 @@ function equipmentSlot(id,selected,label,details){
 Object.assign(equipmentIcons,{
  canned:'🥫',coffee:'☕',supp:'🔇',bottle:'🔇',choke:'⚙️',red:'🎯',scope:'🔭',mag:'▥',laser:'🔴',
  bread:'🍞',chips:'🍟',choco:'🍫',apple:'🍎',mre:'🍱',water:'water',soda:'🥤',bandage:'🩹',rag:'🧻',medkit:'🧰',
- pills:'💊',pilhas:'🔋',antibio:'🧪',cloth:'👕',plank:'plank',nails:'nails',alcohol:'🍶',a9:'•',ashell:'▮',arifle:'▴',rocket:'🚀',
+ pills:'💊',pilhas:'🔋',radiop:'📻',arroz:'🍚',fogueira:'🔥',soba:'🍜',carreteiro:'🍛',chipa:'🥯',rotten:'🤢',antibio:'🧪',cloth:'👕',plank:'plank',nails:'nails',alcohol:'🍶',a9:'•',ashell:'▮',arifle:'▴',rocket:'🚀',
  backpack:'🎒',milpack:'🎒',trailpack:'🎒',expeditionpack:'🎒',screwdriver:'🪛',gascan:'⛽',gascanE:'🛢️',bottleE:'bottleE',veg:'🥬',seeds:'🌱',
  hoe:'⛏️',tarp:'⛺',barrel:'🪣',generator:'⚡',circuit:'📟',battery:'🔋',antenna:'📡',coin:'🪙',box:'📦',spear:'🔱'
 });
