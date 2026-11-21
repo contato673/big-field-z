@@ -941,32 +941,143 @@ function _0x141c0e(_0x3b4909){if(!_0x433a74.alive){_0x433a74.dash=null,_0x433a74
 const player=_0x433a74;
 const id=player.zed?({'Esquerda':'claw','Certo / Q':'roar','R':'pounce'}[key]):[player.gun?.id,player.pistol?.id,player.melee?.id,player.throwId][Number(key[0])-1];
 return equipmentSlot(id,selected,label,details)
-},_0x4b4df7=_0x433a74.zed?_0x4b00ea('Esquerda',!![],'Garra\u002e','Prender os vivos e os bandidos\u002e')+_0x4b00ea('Certo \x2f Q',![],'Grita!',_0x433a74.roarT>0x0?'Mais\u002e '+Math.ceil(_0x433a74.roarT)+' seg':'Tragam o próximo cadáver\u002e')+(_0x52783d('hunt',0x2)?_0x4b00ea('R',![],'Voar pow!',_0x433a74.pounceT>0x0?'Mais\u002e '+Math.ceil(_0x433a74.pounceT)+' seg':'À frente'):''):_0x4686bb('1 · Arma principal','gun',_0x433a74.gun)+_0x4686bb('2 · Subarmas','side',_0x433a74.pistol)+_0x4b00ea('3 · Combate corpo a corpo',_0x433a74.hand==='melee',_0x3b3d20.n,_0x433a74.melee?'\u002d Longo\u002e '+_0x433a74.melee.dur+'\x2f'+_0x3b3d20.dur:'Empurrar \x2f Boxe',_0x433a74.melee?Math.round(_0x433a74.melee.dur/_0x3b3d20.dur*0x64):null)+_0x4b00ea('4 · Atira\u002da\u002e',_0x433a74.hand==='throw',_0x433a74.throwId?_0x49baf9[_0x433a74.throwId].n:'—',_0x433a74.throwId?'Restante '+_0x3b484e(_0x433a74.throwId):'Nenhum');_0x4b4df7!==_0x253534&&(_0x253534=_0x4b4df7,_0x44e0d9('\x23hotbar').innerHTML=_0x4b4df7);let _0x54dd4a='';if(_0x433a74.car&&_0x433a74.seat&&!_0x541bdd.loot){const _0x266f62=_0x433a74.car;_0x54dd4a='\x3ckbd\x3eE\x3c\x2fkbd\x3eSai do carro\u002e　Senta\u002dte\u002e'+_0x266f62.name+'É\u002e\u002e\u002e'+_0x40f12c(_0x433a74.seat)+'　Velocidade por hora '+Math.round(Math.abs(_0x266f62.speed)*3.6);}else{if(_0x433a74.car&&!_0x541bdd.loot){const _0x496c33=_0x433a74.car;_0x54dd4a='\x3ckbd\x3eE\x3c\x2fkbd\x3eSai do carro\u002e　Volume de óleo '+Math.round(_0x496c33.fuel)+'\x25　O carro\u002e '+Math.round(_0x496c33.hp)+'\x25　Velocidade por hora '+Math.round(Math.abs(_0x496c33.speed)*3.6);if(_0x3242e1(_0x496c33.x,_0x496c33.z,5.5)&&Math.abs(_0x496c33.speed)<0x1)_0x54dd4a+='　\x3ckbd\x3eR\x3c\x2fkbd\x3eEnche\u002do\u002e';}else{if(_0x433a74.zed&&!_0x541bdd.loot)_0x54dd4a=!_0x271c6d?'':_0x271c6d.kind==='op'?'Clique com o botão esquerdo'+(_0x271c6d.k==='door'?'Porta\u002e':'Janela')+(_0x53d270(_0x271c6d)?'　\x3ckbd\x3eEspaço\x3c\x2fkbd\x3ePular janela':''):_0x271c6d.kind==='fence'?'\x3ckbd\x3eEspaço\x3c\x2fkbd\x3ePor cima da vedação\u002e':_0x271c6d.kind==='stair'?_0x514571(_0x271c6d):'';else _0x271c6d&&!_0x541bdd.loot&&(_0x54dd4a=_0x271c6d.kind==='bed'?_0x5a5ff5(_0x271c6d):_0x271c6d.kind==='stair'?_0x514571(_0x271c6d):_0x271c6d.kind==='fence'?'\x3ckbd\x3eEspaço\x3c\x2fkbd\x3ePor cima da vedação\u002e':_0x271c6d.kind==='jump'?'A rua é do lado de fora da janela\u002e　\x3ckbd\x3eEspaço\x3c\x2fkbd\x3eSaltando de uma janela\u002e'+(_0x3832da.buildings[_0x271c6d.b].level+0x1)+' Construindo, você vai se machucar\u002e':_0x271c6d.kind==='trader'?'\x3ckbd\x3eE\x3c\x2fkbd\x3eLidar com empresários':_0x271c6d.kind==='surv'?_0x271c6d.z.state==='chase'?'Os sobreviventes estão a seguir\u002dnos\u002e':'\x3ckbd\x3eE\x3c\x2fkbd\x3eDeixa os sobreviventes irem contigo\u002e':_0x271c6d.kind==='cure'?_0x3b484e('antibio')?'\x3ckbd\x3eE\x3c\x2fkbd\x3eToma\u002e '+_0x1cf6e2(_0x271c6d.name)+' Ponham\u002dno de volta nos antibióticos\u002e':_0x1cf6e2(_0x271c6d.name)+' O corpo caiu quando foi virado\u002e　Só é possível poupar com antibióticos\u002e':_0x271c6d.kind==='radio'?_0x35089e():_0x271c6d.kind==='beacon'?_0x561a80():_0x271c6d.kind==='tap'?_0x112840(_0x271c6d):_0x271c6d.kind==='placed'?_0x4a9e09(_0x271c6d):_0x271c6d.kind==='veh'?_0x3cc0c3(_0x271c6d):_0x271c6d.kind==='pump'?_0x4778d2(_0x271c6d):_0x271c6d.kind==='op'?_0x145072(_0x271c6d):_0x271c6d.kind==='bag'?'\x3ckbd\x3eE\x3c\x2fkbd\x3eVer '+_0x271c6d.name:_0x271c6d.items===null?'\x3ckbd\x3eE\x3c\x2fkbd\x3eProcurar '+_0x271c6d.name:'\x3ckbd\x3eE\x3c\x2fkbd\x3eAbrir '+_0x271c6d.name+(_0x271c6d.items.length?'':'（Vazio\u0029'));}}if(window.drawNearby)window.drawNearby(_0x54dd4a,_0x271c6d,!!_0x433a74.car,_0x5bb89d);_0x54dd4a=_0x2a46a2(_0x54dd4a);_0x54dd4a!==_0x4a1e2a&&(_0x4a1e2a=_0x54dd4a,_0x44e0d9('\x23prompt').innerHTML=_0x54dd4a,_0x44e0d9('\x23prompt').hidden=!_0x54dd4a);const _0x1469c5=_0x44e0d9('\x23progress');if(_0x433a74.action)_0x1469c5.hidden=![],_0x1469c5.querySelector('span').textContent=_0x433a74.action.label,_0x1469c5.querySelector('\x2efl').style.width=_0x433a74.action.t/_0x433a74.action.dur*0x64+'\x25';else{if(_0x433a74.reloadT>0x0&&_0x433a74.reloadG)_0x1469c5.hidden=![],_0x1469c5.querySelector('span').textContent='Carregando',_0x1469c5.querySelector('\x2efl').style.width=(0x1-_0x433a74.reloadT/(_0x433a74.reloadMax||_0x49baf9[_0x433a74.reloadG.id].reload))*0x64+'\x25';else _0x1469c5.hidden=!![];}const _0x520c43=_0x44e0d9('\x23cross');_0x520c43.style.transform='translate\x28'+_0x1d03f7.x+'px,'+_0x1d03f7.y+'px\x29';const _0x3f7347=_0x520c43.firstChild;let _0x3a39fb=0xa;if(_0x54216f){const _0x14bd3b=Math.hypot(_0x433a74.vx,_0x433a74.vz);_0x3a39fb=0xc+_0x3bb710(_0x479149).spread*(0x1+(_0x433a74.bloom||0x0))*_0x1d87ad([0x1,1.25,1.5,1.7])*(_0x433a74.sprinting?2.4:_0x14bd3b>0.5?1.5:0x1)*(_0x433a74.crouch?0.75:0x1)*0x104;}else{if(_0x433a74.hand==='throw')_0x3a39fb=0x6;}_0x3f7347.style.width=_0x3f7347.style.height=_0x3a39fb+'px';}const attackButton=_0xc4c6ff.atk;
-let shotFinger=null,shotX=0,shotY=0;
-function pointShot(event){
- const dx=event.clientX-shotX,dy=event.clientY-shotY;
- if(Math.hypot(dx,dy)>5){
- const yaw=_0x4ded08.yaw,c=Math.cos(yaw),s=Math.sin(yaw);
- _0x4dd7a5.ra={a:Math.atan2(dx*c+dy*s,-dx*s+dy*c),d:Math.min(10,3+Math.hypot(dx,dy)/12)};
- }
- _0x4dd7a5.lock=0;_0x2217c9(0,true);
+},_0x4b4df7=_0x433a74.zed?_0x4b00ea('Esquerda',!![],'Garra\u002e','Prender os vivos e os bandidos\u002e')+_0x4b00ea('Certo \x2f Q',![],'Grita!',_0x433a74.roarT>0x0?'Mais\u002e '+Math.ceil(_0x433a74.roarT)+' seg':'Tragam o próximo cadáver\u002e')+(_0x52783d('hunt',0x2)?_0x4b00ea('R',![],'Voar pow!',_0x433a74.pounceT>0x0?'Mais\u002e '+Math.ceil(_0x433a74.pounceT)+' seg':'À frente'):''):_0x4686bb('1 · Arma principal','gun',_0x433a74.gun)+_0x4686bb('2 · Subarmas','side',_0x433a74.pistol)+_0x4b00ea('3 · Combate corpo a corpo',_0x433a74.hand==='melee',_0x3b3d20.n,_0x433a74.melee?'\u002d Longo\u002e '+_0x433a74.melee.dur+'\x2f'+_0x3b3d20.dur:'Empurrar \x2f Boxe',_0x433a74.melee?Math.round(_0x433a74.melee.dur/_0x3b3d20.dur*0x64):null)+_0x4b00ea('4 · Atira\u002da\u002e',_0x433a74.hand==='throw',_0x433a74.throwId?_0x49baf9[_0x433a74.throwId].n:'—',_0x433a74.throwId?'Restante '+_0x3b484e(_0x433a74.throwId):'Nenhum');_0x4b4df7!==_0x253534&&(_0x253534=_0x4b4df7,_0x44e0d9('\x23hotbar').innerHTML=_0x4b4df7);let _0x54dd4a='';if(_0x433a74.car&&_0x433a74.seat&&!_0x541bdd.loot){const _0x266f62=_0x433a74.car;_0x54dd4a='\x3ckbd\x3eE\x3c\x2fkbd\x3eSai do carro\u002e　Senta\u002dte\u002e'+_0x266f62.name+'É\u002e\u002e\u002e'+_0x40f12c(_0x433a74.seat)+'　Velocidade por hora '+Math.round(Math.abs(_0x266f62.speed)*3.6);}else{if(_0x433a74.car&&!_0x541bdd.loot){const _0x496c33=_0x433a74.car;_0x54dd4a='\x3ckbd\x3eE\x3c\x2fkbd\x3eSai do carro\u002e　Volume de óleo '+Math.round(_0x496c33.fuel)+'\x25　O carro\u002e '+Math.round(_0x496c33.hp)+'\x25　Velocidade por hora '+Math.round(Math.abs(_0x496c33.speed)*3.6);if(_0x3242e1(_0x496c33.x,_0x496c33.z,5.5)&&Math.abs(_0x496c33.speed)<0x1)_0x54dd4a+='　\x3ckbd\x3eR\x3c\x2fkbd\x3eEnche\u002do\u002e';}else{if(_0x433a74.zed&&!_0x541bdd.loot)_0x54dd4a=!_0x271c6d?'':_0x271c6d.kind==='op'?'Clique com o botão esquerdo'+(_0x271c6d.k==='door'?'Porta\u002e':'Janela')+(_0x53d270(_0x271c6d)?'　\x3ckbd\x3eEspaço\x3c\x2fkbd\x3ePular janela':''):_0x271c6d.kind==='fence'?'\x3ckbd\x3eEspaço\x3c\x2fkbd\x3ePor cima da vedação\u002e':_0x271c6d.kind==='stair'?_0x514571(_0x271c6d):'';else _0x271c6d&&!_0x541bdd.loot&&(_0x54dd4a=_0x271c6d.kind==='bed'?_0x5a5ff5(_0x271c6d):_0x271c6d.kind==='stair'?_0x514571(_0x271c6d):_0x271c6d.kind==='fence'?'\x3ckbd\x3eEspaço\x3c\x2fkbd\x3ePor cima da vedação\u002e':_0x271c6d.kind==='jump'?'A rua é do lado de fora da janela\u002e　\x3ckbd\x3eEspaço\x3c\x2fkbd\x3eSaltando de uma janela\u002e'+(_0x3832da.buildings[_0x271c6d.b].level+0x1)+' Construindo, você vai se machucar\u002e':_0x271c6d.kind==='trader'?'\x3ckbd\x3eE\x3c\x2fkbd\x3eLidar com empresários':_0x271c6d.kind==='surv'?_0x271c6d.z.state==='chase'?'Os sobreviventes estão a seguir\u002dnos\u002e':'\x3ckbd\x3eE\x3c\x2fkbd\x3eDeixa os sobreviventes irem contigo\u002e':_0x271c6d.kind==='cure'?_0x3b484e('antibio')?'\x3ckbd\x3eE\x3c\x2fkbd\x3eToma\u002e '+_0x1cf6e2(_0x271c6d.name)+' Ponham\u002dno de volta nos antibióticos\u002e':_0x1cf6e2(_0x271c6d.name)+' O corpo caiu quando foi virado\u002e　Só é possível poupar com antibióticos\u002e':_0x271c6d.kind==='radio'?_0x35089e():_0x271c6d.kind==='beacon'?_0x561a80():_0x271c6d.kind==='tap'?_0x112840(_0x271c6d):_0x271c6d.kind==='placed'?_0x4a9e09(_0x271c6d):_0x271c6d.kind==='veh'?_0x3cc0c3(_0x271c6d):_0x271c6d.kind==='pump'?_0x4778d2(_0x271c6d):_0x271c6d.kind==='op'?_0x145072(_0x271c6d):_0x271c6d.kind==='bag'?'\x3ckbd\x3eE\x3c\x2fkbd\x3eVer '+_0x271c6d.name:_0x271c6d.items===null?'\x3ckbd\x3eE\x3c\x2fkbd\x3eProcurar '+_0x271c6d.name:'\x3ckbd\x3eE\x3c\x2fkbd\x3eAbrir '+_0x271c6d.name+(_0x271c6d.items.length?'':'（Vazio\u0029'));}}if(window.drawNearby)window.drawNearby(_0x54dd4a,_0x271c6d,!!_0x433a74.car,_0x5bb89d);_0x54dd4a=_0x2a46a2(_0x54dd4a);_0x54dd4a!==_0x4a1e2a&&(_0x4a1e2a=_0x54dd4a,_0x44e0d9('\x23prompt').innerHTML=_0x54dd4a,_0x44e0d9('\x23prompt').hidden=!_0x54dd4a);const _0x1469c5=_0x44e0d9('\x23progress');if(_0x433a74.action)_0x1469c5.hidden=![],_0x1469c5.querySelector('span').textContent=_0x433a74.action.label,_0x1469c5.querySelector('\x2efl').style.width=_0x433a74.action.t/_0x433a74.action.dur*0x64+'\x25';else{if(_0x433a74.reloadT>0x0&&_0x433a74.reloadG)_0x1469c5.hidden=![],_0x1469c5.querySelector('span').textContent='Carregando',_0x1469c5.querySelector('\x2efl').style.width=(0x1-_0x433a74.reloadT/(_0x433a74.reloadMax||_0x49baf9[_0x433a74.reloadG.id].reload))*0x64+'\x25';else _0x1469c5.hidden=!![];}const _0x520c43=_0x44e0d9('\x23cross');_0x520c43.style.transform='translate\x28'+_0x1d03f7.x+'px,'+_0x1d03f7.y+'px\x29';const _0x3f7347=_0x520c43.firstChild;let _0x3a39fb=0xa;if(_0x54216f){const _0x14bd3b=Math.hypot(_0x433a74.vx,_0x433a74.vz);_0x3a39fb=0xc+_0x3bb710(_0x479149).spread*(0x1+(_0x433a74.bloom||0x0))*_0x1d87ad([0x1,1.25,1.5,1.7])*(_0x433a74.sprinting?2.4:_0x14bd3b>0.5?1.5:0x1)*(_0x433a74.crouch?0.75:0x1)*0x104;}else{if(_0x433a74.hand==='throw')_0x3a39fb=0x6;}_0x3f7347.style.width=_0x3f7347.style.height=_0x3a39fb+'px';}/* ===== Mira por toque (botão Atacar) =====
+   Toque rápido  → atira/golpeia no inimigo mais ameaçador ao alcance (anel vermelho mostra quem é).
+   Arrastar      → aponta na direção do dedo; um "ímã" gruda no inimigo mais próximo dessa direção.
+   Segurar       → armas automáticas fazem rajada enquanto houver alvo travado.
+   Soltar        → dispara (armas semi) no alvo travado ou na direção arrastada. */
+const attackButton = _0xc4c6ff.atk;
+const aimRing = new THREE.Mesh(
+  new THREE.RingGeometry(0.42, 0.6, 28),
+  new THREE.MeshBasicMaterial({ color: 0xff4a32, transparent: true, opacity: 0.85, depthTest: false, depthWrite: false }),
+);
+aimRing.rotation.x = -Math.PI / 2;
+aimRing.renderOrder = 999;
+aimRing.visible = false;
+_0x2fea30.add(aimRing);
+const aim = { id: null, x0: 0, y0: 0, t0: 0, drag: 0, dir: null, target: null, idleT: 0, idle: null };
+function aimWeapon() {
+  const g = _0x43097b();
+  return g ? _0x49baf9[g.id] : null;
 }
-attackButton.addEventListener('pointerdown',e=>{
- if(e.pointerType==='mouse'||_0x26bd25.on)return;
- e.stopImmediatePropagation();e.preventDefault();if(shotFinger!==null)return;
- shotFinger=e.pointerId;shotX=e.clientX;shotY=e.clientY;
- attackButton.setPointerCapture(e.pointerId);_0x3a1f19('touch');_0x288c18();
- _0x4dd7a5.ra={a:_0x433a74.face,d:5};document.body.classList.add('aimingShot');pointShot(e);
-},true);
-attackButton.addEventListener('pointermove',e=>{if(shotFinger===e.pointerId){e.stopImmediatePropagation();pointShot(e)}},true);
-function endAim(){shotFinger=null;_0x4dd7a5.ra=null;_0x4dd7a5.lock=0;document.body.classList.remove('aimingShot')}
-attackButton.addEventListener('pointerup',e=>{
- if(shotFinger!==e.pointerId)return;e.stopImmediatePropagation();pointShot(e);
- if(_0x5cdc94.state==='play'&&!_0x5cdc94.paused&&!_0x541bdd.open){_0x58b13b();_0x433a74.face=_0x4dd7a5.ra.a;_0x44f905(true)}
- endAim();
-},true);
-for(const type of ['pointercancel','lostpointercapture'])attackButton.addEventListener(type,e=>{if(shotFinger===e.pointerId)endAim()});
-window.addEventListener('blur',()=>{if(shotFinger!==null)endAim()});
+function aimRange() {
+  const w = aimWeapon();
+  if (w) return Math.min(16, (w.range || 14) * 0.85);
+  return _0x433a74.hand === "throw" ? 10 : 3.4;
+}
+function aimTargets() {
+  const out = [], R = aimRange(), p = _0x433a74;
+  for (const z of _0x2d87c5) {
+    if (z.dead || z.removed || z.lying || (z.d && z.d.ally)) continue;
+    const dx = z.x - p.x, dz = z.z - p.z, d = Math.hypot(dx, dz);
+    if (d < 0.3 || d > R || !_0x39b7b1(z.x, z.z, 0.6)) continue;
+    out.push({ z, d, a: Math.atan2(dx, dz) });
+  }
+  return out;
+}
+// alvo automático: o mais perto, com preferência para quem está na frente
+function aimAuto() {
+  let best = null, score = 1e9;
+  for (const t of aimTargets()) {
+    const s = t.d + Math.abs(_0x17fa40(t.a, _0x433a74.face)) * 1.6;
+    if (s < score) { score = s; best = t.z; }
+  }
+  return best;
+}
+// ímã: o inimigo mais alinhado com a direção do dedo (tolerância maior para quem está perto)
+function aimMagnet(dir) {
+  let best = null, score = 1e9;
+  for (const t of aimTargets()) {
+    const tol = Math.max(0.3, Math.atan(1.1 / t.d)), off = Math.abs(_0x17fa40(t.a, dir));
+    if (off > tol) continue;
+    const s = off / tol + t.d * 0.02;
+    if (s < score) { score = s; best = t.z; }
+  }
+  return best;
+}
+function aimValid(z) {
+  return z && !z.dead && !z.removed && !z.lying && Math.hypot(z.x - _0x433a74.x, z.z - _0x433a74.z) <= aimRange() + 1;
+}
+function aimApply() {
+  const p = _0x433a74, t = aim.target;
+  if (aimValid(t)) _0x4dd7a5.ra = { a: Math.atan2(t.x - p.x, t.z - p.z), d: Math.max(1.2, Math.hypot(t.x - p.x, t.z - p.z)) };
+  else if (aim.dir !== null) _0x4dd7a5.ra = { a: aim.dir, d: Math.min(10, 3 + aim.drag / 12) };
+  else _0x4dd7a5.ra = { a: p.face, d: 5 };
+  _0x4dd7a5.lock = 0;
+  _0x2217c9(0, true);
+}
+function aimMove(e) {
+  const dx = e.clientX - aim.x0, dy = e.clientY - aim.y0;
+  aim.drag = Math.hypot(dx, dy);
+  if (aim.drag > 14) {
+    const yaw = _0x4ded08.yaw, c = Math.cos(yaw), s = Math.sin(yaw);
+    aim.dir = Math.atan2(dx * c + dy * s, -dx * s + dy * c);
+    aim.target = aimMagnet(aim.dir);
+  }
+  aimApply();
+  const w = aimWeapon();
+  _0x1d03f7.down = !!(w && w.auto && aim.dir !== null && aimValid(aim.target) && performance.now() - aim.t0 > 180);
+}
+function aimEnd() {
+  aim.id = null; aim.dir = null; aim.target = null;
+  _0x4dd7a5.ra = null; _0x4dd7a5.lock = 0; _0x1d03f7.down = false;
+  document.body.classList.remove("aimingShot");
+}
+attackButton.addEventListener("pointerdown", (e) => {
+  if (e.pointerType === "mouse" || _0x26bd25.on) return;
+  e.stopImmediatePropagation(); e.preventDefault();
+  if (aim.id !== null) return;
+  aim.id = e.pointerId; aim.x0 = e.clientX; aim.y0 = e.clientY; aim.t0 = performance.now(); aim.drag = 0; aim.dir = null;
+  try { attackButton.setPointerCapture(e.pointerId); } catch (err) {}
+  _0x3a1f19("touch"); _0x288c18();
+  aim.target = aimAuto();
+  document.body.classList.add("aimingShot");
+  aimApply();
+}, true);
+attackButton.addEventListener("pointermove", (e) => {
+  if (aim.id === e.pointerId) { e.stopImmediatePropagation(); aimMove(e); }
+}, true);
+attackButton.addEventListener("pointerup", (e) => {
+  if (aim.id !== e.pointerId) return;
+  e.stopImmediatePropagation();
+  aimMove(e);
+  // toque rápido sem alvo à vista: mantém a direção em que o personagem olha
+  if (aim.dir === null && !aimValid(aim.target)) aim.target = aimAuto();
+  aimApply();
+  if (_0x5cdc94.state === "play" && !_0x5cdc94.paused && !_0x541bdd.open) {
+    _0x58b13b();
+    _0x433a74.face = _0x4dd7a5.ra.a;
+    _0x44f905(true);
+  }
+  aimEnd();
+}, true);
+for (const type of ["pointercancel", "lostpointercapture"])
+  attackButton.addEventListener(type, (e) => { if (aim.id === e.pointerId) aimEnd(); });
+window.addEventListener("blur", () => { if (aim.id !== null) aimEnd(); });
+// a cada quadro: segue o alvo que se move e mostra o anel (fraco = quem o toque vai acertar; forte = travado)
+function cgAimTick(dt) {
+  const touch = _0x4dd7a5.mode === "touch" && _0x5cdc94.state === "play" && _0x433a74.alive && !_0x433a74.car && !_0x433a74.zed;
+  if (!touch) { aimRing.visible = false; return; }
+  let show = null, strong = false;
+  if (aim.id !== null) {
+    if (!aimValid(aim.target)) aim.target = aim.dir !== null ? aimMagnet(aim.dir) : aimAuto();
+    aimApply();
+    show = aimValid(aim.target) ? aim.target : null;
+    strong = true;
+  } else {
+    aim.idleT -= dt;
+    if (aim.idleT <= 0) { aim.idleT = 0.15; aim.idle = aimAuto(); }
+    show = aimValid(aim.idle) ? aim.idle : null;
+  }
+  aimRing.visible = !!show;
+  if (show) {
+    const k = strong ? 1 + Math.sin(performance.now() / 90) * 0.08 : 0.9;
+    aimRing.position.set(show.x, 0.08, show.z);
+    aimRing.scale.setScalar(k);
+    aimRing.material.opacity = strong ? 0.9 : 0.35;
+  }
+}
+
 let _0x5608b1=performance.now(),_0x51c75f=performance.now(),_0x22448a=0x0,_0x15941d=0x0,_0x19c9f7=0x0;const residents=[
  {name:'Lia',story:'Eu fazia a ronda da enfermaria quando a luz acabou. Ainda volto ao posto. Minha irmã sabe me procurar lá.',hostile:false},
  {name:'Bento',story:'Marquei as portas das casas onde deixei comida. Se achar um risco azul, pode pegar metade.',hostile:false},
@@ -1111,6 +1222,6 @@ function updateQuestSigns(dt){
   world.group.remove(sign);sign.material.map.dispose();sign.material.dispose();signs.delete(key)
  }
 }
-function _0x19574d(_0xcc6694){if(_0x5cdc94.state==="play"&&!_0x213b92.on)storyTick(_0xcc6694);else storyCall.hidden=true;updateQuestSigns(_0xcc6694);updateStreetHud(_0xcc6694);if(!_0x3832da||_0x5cdc94.state!=='play'&&_0x5cdc94.state!=='dead'||_0x5cdc94.paused)return;if(_0x5cdc94.state==="play")startResidents();const _0x1bfed7=_0x17d0c5();_0x4fa4ab=_0x2c84a1(),_0x5cdc94.T+=_0xcc6694*_0x584c52,_0x3b0fb5(),_0x1d59db(),_0x141c0e(_0xcc6694);if(_0x1bfed7){_0x5cdc94.flowT-=_0xcc6694;_0x5cdc94.flowT<=0x0&&(_0x5cdc94.flowT=0.3,_0x20da3c());_0x5cdc94.footT-=_0xcc6694;if(_0x5cdc94.footT<=0x0){_0x5cdc94.footT=0.45;for(const _0x514c88 of _0x4fa4ab)if(!_0x514c88.local&&_0x514c88.noiseR>0.5)_0x5b12bd(_0x514c88.x,_0x514c88.z,_0x514c88.noiseR,![],!![]);}for(const _0x45d7e7 of _0x2d87c5)if(!_0x45d7e7.removed)_0x1f8aa9(_0x45d7e7,_0xcc6694);_0x43ddcc(),_0x2ff927(_0xcc6694);}else{for(const _0x35e33a of _0x2d87c5)if(!_0x35e33a.removed)_0x205b79(_0x35e33a,_0xcc6694);if(_0x433a74.alive)_0x4acd63();_0x2d87c5=_0x2d87c5.filter(_0x5d5c66=>!_0x5d5c66.removed);}_0x157bee(_0xcc6694),_0x120fef(_0xcc6694),_0x85bba5(_0xcc6694),_0xac41c4(_0xcc6694),_0x1bb636(_0xcc6694),_0x4109c5(_0xcc6694),_0x3a756b(_0xcc6694),_0x590e2e(_0xcc6694);if(_0x5cdc94.state==='play'){_0x271c6d=_0x433a74.alive&&!_0x433a74.action&&!_0x433a74.climb&&!_0x433a74.car?_0x56b3d():null;if(_0x433a74.zed&&_0x271c6d&&!['op','fence','stair','jump'].includes(_0x271c6d.kind))_0x271c6d=null;_0x271c6d&&_0x271c6d.kind==='stair'&&!_0x5cdc94.stairTip&&(_0x5cdc94.stairTip=0x1,_0x1316fa('Há uma escada aqui, fique na escada e pressione\u002e E Vai lá para cima ou para baixo\u002e','good'));if(_0x541bdd.loot){const _0x2936bb=_0x541bdd.loot,_0x507cb9=_0x2936bb.veh?_0x16d305(_0x2936bb.veh,_0x433a74.x,_0x433a74.z):_0x2936bb.kind==='bag'?Math.hypot(_0x2936bb.x-_0x433a74.x,_0x2936bb.z-_0x433a74.z):Math.hypot(_0x433a74.x-_0x420165(_0x433a74.x,_0x2936bb.x1,_0x2936bb.x2),_0x433a74.z-_0x420165(_0x433a74.z,_0x2936bb.z1,_0x2936bb.z2));if(_0x507cb9>2.2)_0x1fbe10();}if(_0x541bdd.trade&&Math.hypot(_0x541bdd.trade.x-_0x433a74.x,_0x541bdd.trade.z-_0x433a74.z)>3.2)_0x1fbe10();_0x22448a-=_0xcc6694,_0x22448a<=0x0&&_0x541bdd.open&&(_0x22448a=0.5,_0x546b2c()),_0x15941d-=_0xcc6694,_0x15941d<=0x0&&(_0x15941d=0.5,_0x224e0e(),_0x1757f4(),_0x528bc7(),_0x230f96(),_0x2fa74f()),_0x5cdc94.saveT+=_0xcc6694,_0x5cdc94.saveT>0x14&&(_0x5cdc94.saveT=0x0,_0x1946e7(),_0x5198b2(),_0x21e19a());}}function _0x2b35a7(_0x1e524,_0xff210d){let _0x2a1b17=Math.min(_0xff210d,(_0x1e524-_0x5608b1)/0x3e8);_0x5608b1=_0x1e524;while(_0x2a1b17>0.0001){const _0x2e8c6a=Math.min(0.05,_0x2a1b17);_0x19574d(_0x2e8c6a),_0x2a1b17-=_0x2e8c6a;}}function _0x2bcefc(_0x3a38f0){requestAnimationFrame(_0x2bcefc);const _0x405da3=Math.min(0.05,(_0x3a38f0-_0x51c75f)/0x3e8);_0x51c75f=_0x3a38f0;if(!_0x3832da)return;_0x45622(_0x405da3),_0x2b35a7(_0x3a38f0,0.25);if(_0x5cdc94.state==='play'||_0x5cdc94.state==='dead')_0x335bfa();_0x541bdd.map&&(_0x19c9f7-=_0x405da3)<=0x0&&(_0x19c9f7=0.1,_0x386679());if(_0x213b92.on)_0x27097e(_0x405da3);_0x36b11d(),_0x24ba8f(),_0x312319(_0x405da3),_0x1b01af(_0x405da3),_0x4058c4(_0x405da3),_0x29e0dc(_0x405da3),_0x4468dd(_0x405da3),_0x135df8(_0x405da3),_0x636ec9(),_0x3ed5ef(),_0x5564cf.render(_0x2fea30,_0xa05b7c),_0x966c2e(_0x405da3),_0x171780();}setInterval(()=>{const _0x2ae013=performance.now();if(_0x5cdc94.state!=='title'&&_0x2ae013-_0x51c75f>0x12c)_0x2b35a7(_0x2ae013,0x1);},0xfa),addEventListener('beforeunload',()=>{_0x1946e7();if(_0x213b92.on)_0x54ee0b();});for(const _0x2ef078 of['pointerdown','pointerup','touchend','click','keydown'])addEventListener(_0x2ef078,_0x288c18,{'passive':!![]});document.addEventListener('visibilitychange',()=>{if(!_0x4a099c)return;if(document.hidden)_0x4a099c.suspend();else _0x4a099c.resume();}),setTimeout(()=>{_0x5adb3f(Math.random()*0x3b9aca00|0x0),_0x44e0d9('\x23loading').hidden=!![],_0x18f790(),requestAnimationFrame(_0x2bcefc);},0x1e);})());</script>
+function _0x19574d(_0xcc6694){if(_0x5cdc94.state==="play"&&!_0x213b92.on)storyTick(_0xcc6694);else storyCall.hidden=true;updateQuestSigns(_0xcc6694);updateStreetHud(_0xcc6694);cgAimTick(_0xcc6694);if(!_0x3832da||_0x5cdc94.state!=='play'&&_0x5cdc94.state!=='dead'||_0x5cdc94.paused)return;if(_0x5cdc94.state==="play")startResidents();const _0x1bfed7=_0x17d0c5();_0x4fa4ab=_0x2c84a1(),_0x5cdc94.T+=_0xcc6694*_0x584c52,_0x3b0fb5(),_0x1d59db(),_0x141c0e(_0xcc6694);if(_0x1bfed7){_0x5cdc94.flowT-=_0xcc6694;_0x5cdc94.flowT<=0x0&&(_0x5cdc94.flowT=0.3,_0x20da3c());_0x5cdc94.footT-=_0xcc6694;if(_0x5cdc94.footT<=0x0){_0x5cdc94.footT=0.45;for(const _0x514c88 of _0x4fa4ab)if(!_0x514c88.local&&_0x514c88.noiseR>0.5)_0x5b12bd(_0x514c88.x,_0x514c88.z,_0x514c88.noiseR,![],!![]);}for(const _0x45d7e7 of _0x2d87c5)if(!_0x45d7e7.removed)_0x1f8aa9(_0x45d7e7,_0xcc6694);_0x43ddcc(),_0x2ff927(_0xcc6694);}else{for(const _0x35e33a of _0x2d87c5)if(!_0x35e33a.removed)_0x205b79(_0x35e33a,_0xcc6694);if(_0x433a74.alive)_0x4acd63();_0x2d87c5=_0x2d87c5.filter(_0x5d5c66=>!_0x5d5c66.removed);}_0x157bee(_0xcc6694),_0x120fef(_0xcc6694),_0x85bba5(_0xcc6694),_0xac41c4(_0xcc6694),_0x1bb636(_0xcc6694),_0x4109c5(_0xcc6694),_0x3a756b(_0xcc6694),_0x590e2e(_0xcc6694);if(_0x5cdc94.state==='play'){_0x271c6d=_0x433a74.alive&&!_0x433a74.action&&!_0x433a74.climb&&!_0x433a74.car?_0x56b3d():null;if(_0x433a74.zed&&_0x271c6d&&!['op','fence','stair','jump'].includes(_0x271c6d.kind))_0x271c6d=null;_0x271c6d&&_0x271c6d.kind==='stair'&&!_0x5cdc94.stairTip&&(_0x5cdc94.stairTip=0x1,_0x1316fa('Há uma escada aqui, fique na escada e pressione\u002e E Vai lá para cima ou para baixo\u002e','good'));if(_0x541bdd.loot){const _0x2936bb=_0x541bdd.loot,_0x507cb9=_0x2936bb.veh?_0x16d305(_0x2936bb.veh,_0x433a74.x,_0x433a74.z):_0x2936bb.kind==='bag'?Math.hypot(_0x2936bb.x-_0x433a74.x,_0x2936bb.z-_0x433a74.z):Math.hypot(_0x433a74.x-_0x420165(_0x433a74.x,_0x2936bb.x1,_0x2936bb.x2),_0x433a74.z-_0x420165(_0x433a74.z,_0x2936bb.z1,_0x2936bb.z2));if(_0x507cb9>2.2)_0x1fbe10();}if(_0x541bdd.trade&&Math.hypot(_0x541bdd.trade.x-_0x433a74.x,_0x541bdd.trade.z-_0x433a74.z)>3.2)_0x1fbe10();_0x22448a-=_0xcc6694,_0x22448a<=0x0&&_0x541bdd.open&&(_0x22448a=0.5,_0x546b2c()),_0x15941d-=_0xcc6694,_0x15941d<=0x0&&(_0x15941d=0.5,_0x224e0e(),_0x1757f4(),_0x528bc7(),_0x230f96(),_0x2fa74f()),_0x5cdc94.saveT+=_0xcc6694,_0x5cdc94.saveT>0x14&&(_0x5cdc94.saveT=0x0,_0x1946e7(),_0x5198b2(),_0x21e19a());}}function _0x2b35a7(_0x1e524,_0xff210d){let _0x2a1b17=Math.min(_0xff210d,(_0x1e524-_0x5608b1)/0x3e8);_0x5608b1=_0x1e524;while(_0x2a1b17>0.0001){const _0x2e8c6a=Math.min(0.05,_0x2a1b17);_0x19574d(_0x2e8c6a),_0x2a1b17-=_0x2e8c6a;}}function _0x2bcefc(_0x3a38f0){requestAnimationFrame(_0x2bcefc);const _0x405da3=Math.min(0.05,(_0x3a38f0-_0x51c75f)/0x3e8);_0x51c75f=_0x3a38f0;if(!_0x3832da)return;_0x45622(_0x405da3),_0x2b35a7(_0x3a38f0,0.25);if(_0x5cdc94.state==='play'||_0x5cdc94.state==='dead')_0x335bfa();_0x541bdd.map&&(_0x19c9f7-=_0x405da3)<=0x0&&(_0x19c9f7=0.1,_0x386679());if(_0x213b92.on)_0x27097e(_0x405da3);_0x36b11d(),_0x24ba8f(),_0x312319(_0x405da3),_0x1b01af(_0x405da3),_0x4058c4(_0x405da3),_0x29e0dc(_0x405da3),_0x4468dd(_0x405da3),_0x135df8(_0x405da3),_0x636ec9(),_0x3ed5ef(),_0x5564cf.render(_0x2fea30,_0xa05b7c),_0x966c2e(_0x405da3),_0x171780();}setInterval(()=>{const _0x2ae013=performance.now();if(_0x5cdc94.state!=='title'&&_0x2ae013-_0x51c75f>0x12c)_0x2b35a7(_0x2ae013,0x1);},0xfa),addEventListener('beforeunload',()=>{_0x1946e7();if(_0x213b92.on)_0x54ee0b();});for(const _0x2ef078 of['pointerdown','pointerup','touchend','click','keydown'])addEventListener(_0x2ef078,_0x288c18,{'passive':!![]});document.addEventListener('visibilitychange',()=>{if(!_0x4a099c)return;if(document.hidden)_0x4a099c.suspend();else _0x4a099c.resume();}),setTimeout(()=>{_0x5adb3f(Math.random()*0x3b9aca00|0x0),_0x44e0d9('\x23loading').hidden=!![],_0x18f790(),requestAnimationFrame(_0x2bcefc);},0x1e);})());</script>
 
 <link rel="stylesheet" href="mobile-hud.css"><script src="mobile-hud.js"></script><script src="compact.js"></script></html>

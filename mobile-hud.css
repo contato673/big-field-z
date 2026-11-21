@@ -1,9 +1,9 @@
-body.touch #log,body.touch #sideL,body.touch #tut,body.touch #task,body.touch #quest,body.touch #surv,body.touch #rotNote,body.touch #mini,body.touch #clock .t,body.touch #chips,body.touch #team,body.touch #vitals .bar:not(#bHp),body.touch #topR{display:none!important}
+body.touch #log,body.touch #sideL,body.touch #tut,body.touch #task,body.touch #quest,body.touch #surv,body.touch #rotNote,body.touch #mini,body.touch #clock .t,body.touch #chips,body.touch #team,body.touch #bStam,body.touch #topR{display:none!important}
 body.touch #vitals{width:128px;top:max(5px,env(safe-area-inset-top));left:max(8px,env(safe-area-inset-left));padding:5px 7px}
 body.touch #bHp{grid-template-columns:24px 1fr 23px;gap:3px}
 body.touch #tcTop{top:max(4px,env(safe-area-inset-top));right:max(8px,env(safe-area-inset-right));left:auto;transform:none;gap:4px}
 body.touch #tcTop .tb,body.touch #tcTop .hudMenu{position:static;width:auto;min-width:46px;height:44px;padding:0 8px;border-radius:7px;color:#f4ead3;border:1px solid #6c715e;background:#171c18dd;font:13px system-ui;pointer-events:auto}
-body.touch #hotbar{bottom:max(4px,env(safe-area-inset-bottom));gap:2px;background:none}
+body.touch #hotbar{bottom:max(6px,env(safe-area-inset-bottom));gap:2px;background:none;left:auto;right:calc(142px + env(safe-area-inset-right));transform:none}
 body.touch #hotbar .slot{width:36px;height:34px;font-size:19px;padding:1px}
 body.touch #tc .atk,body.touch #tc .gas{height:58px;width:58px;bottom:max(9px,env(safe-area-inset-bottom));right:max(9px,env(safe-area-inset-right));font-size:13px}
 body.touch #tc .shove,body.touch #tc .brake{bottom:max(9px,env(safe-area-inset-bottom));right:calc(76px + env(safe-area-inset-right))}
@@ -28,3 +28,14 @@ body.touch #cross{visibility:hidden}
 body.touch.aimingShot #cross{display:block!important;visibility:visible!important;opacity:1!important}
 body.touch.aimingShot #cross i{width:22px!important;height:22px!important;border:2px solid #fff3b7!important;box-shadow:0 0 0 2px #28271c}
 body.touch.aimingShot #cross b{background:#fff3b7}
+
+/* fome, sede e energia em escala menor, com ícone, logo abaixo da vida */
+body.touch #vitals{gap:3px}
+body.touch #bFood,body.touch #bWater,body.touch #bRest{grid-template-columns:24px 1fr 23px;gap:3px;font-size:10px}
+body.touch #bFood span,body.touch #bWater span,body.touch #bRest span{font-size:0;line-height:1;text-align:center}
+body.touch #bFood span::before,body.touch #bWater span::before,body.touch #bRest span::before{font-size:12px;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
+body.touch #bFood span::before{content:"🍖"}
+body.touch #bWater span::before{content:"💧"}
+body.touch #bRest span::before{content:"⚡"}
+body.touch #bFood .tr,body.touch #bWater .tr,body.touch #bRest .tr{height:4px}
+body.touch #bFood b,body.touch #bWater b,body.touch #bRest b{font-size:9px;color:#c9c2ad}
