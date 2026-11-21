@@ -1,4 +1,4 @@
-body.touch #log,body.touch #sideL,body.touch #tut,body.touch #task,body.touch #quest,body.touch #surv,body.touch #rotNote,body.touch #clock,body.touch #kills,body.touch #chips,body.touch #team,body.touch #bStam{display:none!important}
+body.touch #log,body.touch #sideL,body.touch #tut,body.touch #task,body.touch #quest,body.touch #surv,body.touch #rotNote,body.touch #clock,body.touch #kills,body.touch #chips,body.touch #team{display:none!important}
 body.touch #vitals{width:128px;top:max(5px,env(safe-area-inset-top));left:max(8px,env(safe-area-inset-left));padding:5px 7px}
 body.touch #bHp{grid-template-columns:24px 1fr 23px;gap:3px}
 body.touch #tcTop{top:max(4px,env(safe-area-inset-top));right:max(8px,env(safe-area-inset-right));left:auto;transform:none;gap:4px}
@@ -31,16 +31,21 @@ body.touch.aimingShot #cross b{background:#fff3b7}
 
 /* fome, sede e energia em escala menor, com ícone, logo abaixo da vida */
 body.touch #vitals{gap:3px}
-body.touch #bFood,body.touch #bWater,body.touch #bRest{grid-template-columns:24px 1fr 23px;gap:3px;font-size:10px}
-body.touch #bFood span,body.touch #bWater span,body.touch #bRest span{font-size:0;line-height:1;text-align:center}
-body.touch #bFood span::before,body.touch #bWater span::before,body.touch #bRest span::before{font-size:12px;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
+body.touch #bFood,body.touch #bWater,body.touch #bRest,body.touch #bStam{grid-template-columns:24px 1fr 23px;gap:3px;font-size:10px}
+body.touch #bFood span,body.touch #bWater span,body.touch #bRest span,body.touch #bStam span{font-size:0;line-height:1;text-align:center}
+body.touch #bFood span::before,body.touch #bWater span::before,body.touch #bRest span::before,body.touch #bStam span::before{font-size:12px;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
 body.touch #bFood span::before{content:"🍖"}
 body.touch #bWater span::before{content:"💧"}
 body.touch #bRest span::before{content:"⚡"}
-body.touch #bFood .tr,body.touch #bWater .tr,body.touch #bRest .tr{height:4px}
-body.touch #bFood b,body.touch #bWater b,body.touch #bRest b{font-size:9px;color:#c9c2ad}
+body.touch #bStam span::before{content:"🏃"}
+body.touch #bFood .tr,body.touch #bWater .tr,body.touch #bRest .tr,body.touch #bStam .tr{height:4px}
+body.touch #bFood b,body.touch #bWater b,body.touch #bRest b,body.touch #bStam b{font-size:9px;color:#c9c2ad}
 
 /* minimapa no celular: abaixo dos botões do topo, para seguir as missões */
 body.touch #topR{top:calc(max(4px,env(safe-area-inset-top)) + 50px);right:max(8px,env(safe-area-inset-right));gap:0}
 body.touch #mini{width:112px;height:112px;border-radius:8px;border:1px solid #aeb99d66;background:#0b0d0ccc;box-shadow:0 2px 8px #0008;opacity:.95}
 @media(max-height:330px){body.touch #mini{width:88px;height:88px}}
+
+body.cgWinded #bStam .fl{background:#d0402e!important;animation:cgWind .7s infinite}
+body.cgWinded #bStam span{color:#ff8a70}
+@keyframes cgWind{50%{opacity:.45}}
