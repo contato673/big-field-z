@@ -1185,7 +1185,7 @@ _0x1ede80.restore();{const _0x3ce993=_0x52c138();if(_0x3ce993){const _0x19a205=(
 function massOf(item){
  if(!item)return 0;
  const ammo=_0x49baf9[item.id]?.ammo;
- let grams=unitGrams[item.id]*(item.n??1)+(item.mag||0)*(unitGrams[ammo]||0);
+ let grams=(unitGrams[item.id]??({pilhas:100,radiop:450,arroz:1000,fogueira:1600,soba:450,carreteiro:500,chipa:50,rotten:300})[item.id]??250)*(item.n??1)+(item.mag||0)*(unitGrams[ammo]||0);
  if(item.att)for(const accessory of Object.values(item.att))grams+=unitGrams[accessory]||0;
  return grams;
 }
