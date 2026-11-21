@@ -1,0 +1,30 @@
+body.touch #log,body.touch #sideL,body.touch #tut,body.touch #task,body.touch #quest,body.touch #surv,body.touch #rotNote,body.touch #mini,body.touch #clock .t,body.touch #chips,body.touch #team,body.touch #vitals .bar:not(#bHp),body.touch #topR{display:none!important}
+body.touch #vitals{width:128px;top:max(5px,env(safe-area-inset-top));left:max(8px,env(safe-area-inset-left));padding:5px 7px}
+body.touch #bHp{grid-template-columns:24px 1fr 23px;gap:3px}
+body.touch #tcTop{top:max(4px,env(safe-area-inset-top));right:max(8px,env(safe-area-inset-right));left:auto;transform:none;gap:4px}
+body.touch #tcTop .tb,body.touch #tcTop .hudMenu{position:static;width:auto;min-width:46px;height:44px;padding:0 8px;border-radius:7px;color:#f4ead3;border:1px solid #6c715e;background:#171c18dd;font:13px system-ui;pointer-events:auto}
+body.touch #hotbar{bottom:max(4px,env(safe-area-inset-bottom));gap:2px;background:none}
+body.touch #hotbar .slot{width:36px;height:34px;font-size:19px;padding:1px}
+body.touch #tc .atk,body.touch #tc .gas{height:58px;width:58px;bottom:max(9px,env(safe-area-inset-bottom));right:max(9px,env(safe-area-inset-right));font-size:13px}
+body.touch #tc .shove,body.touch #tc .brake{bottom:max(9px,env(safe-area-inset-bottom));right:calc(76px + env(safe-area-inset-right))}
+body.touch #tc .use{bottom:calc(72px + env(safe-area-inset-bottom));right:max(10px,env(safe-area-inset-right))}
+body.touch #stick.idle{opacity:.23}
+#fieldPanel{position:fixed;inset:0;width:min(440px,90vw);max-height:78dvh;overflow:auto;color:#eee7d7;background:#17201b;border:1px solid #767a64;border-radius:12px;padding:14px;font:15px/1.4 system-ui}
+#fieldPanel::backdrop{background:#07090799}
+#fieldPanel header{display:flex;justify-content:space-between;align-items:center;position:sticky;top:-14px;background:#17201b;padding:4px 0}
+#fieldPanel h2{font-size:18px;margin:0}#fieldPanel h3{color:#e8be6d;font-size:14px;margin:13px 0 3px}#fieldPanel p{margin:4px 0}
+#fieldPanel button{background:#303a30;color:#f1e9d7;border:1px solid #66705c;border-radius:6px;padding:5px 10px;min-height:44px;font:14px system-ui}
+#fieldTools{display:flex;gap:5px;flex-wrap:wrap}
+#fieldTools [hidden]{display:none!important}
+body.touch #tcTop .tb,body.touch #tcTop .hudMenu{width:44px;min-width:44px;display:grid;place-items:center;padding:0;background:rgba(15,20,17,.55);border-color:#aeb99d55}
+body.touch #tcTop svg,body.touch #tc .atk svg,body.touch #tc .shove svg{width:22px;height:22px;pointer-events:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+body.touch #prompt,body.touch #tc .use{display:none!important}
+#nearActions{position:absolute;top:clamp(49px,21dvh,90px);left:max(8px,env(safe-area-inset-left));display:flex;flex-wrap:wrap;gap:3px;max-width:min(210px,39vw)}
+#nearActions button,#installHelp button{pointer-events:auto;min-height:44px;padding:4px 9px;color:#f3e8cf;background:#171d18dc;border:1px solid #a9ac8977;border-radius:5px;font:13px system-ui}
+#installHelp{max-width:min(370px,80vw);background:#1d251f;color:#eee6cf;border:1px solid #777c63;border-radius:8px;font:16px system-ui}
+body.touch #mapLegend::before{content:'◆ Suprimentos na área explorada';display:block;color:#72efcc}
+@media(max-height:330px){body.touch #stick.idle{opacity:.12}body.touch #hotbar .slot{width:30px;height:27px}}
+body.touch #cross{visibility:hidden}
+body.touch.aimingShot #cross{display:block!important;visibility:visible!important;opacity:1!important}
+body.touch.aimingShot #cross i{width:22px!important;height:22px!important;border:2px solid #fff3b7!important;box-shadow:0 0 0 2px #28271c}
+body.touch.aimingShot #cross b{background:#fff3b7}

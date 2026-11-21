@@ -1,0 +1,2 @@
+Three.js r128 — MIT license. See vendor/THREE-LICENSE.txt.
+ZCOOL QingKe HuangYou font — SIL Open Font License 1.1. See vendor/ZCOOL-OFL.txt.
