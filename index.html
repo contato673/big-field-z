@@ -785,28 +785,13 @@ function cgTreeGeo(base, variant, ipe) {
   return g;
 }
 
-/* ---------- HUD: rua atual, placas de esquina e nomes no mapa */
+/* ---------- HUD: rua atual no topo da tela e nomes no mapa */
 const cgStreetEl = document.createElement("div");
 cgStreetEl.id = "cgStreet";
 cgStreetEl.className = "hud";
 cgStreetEl.hidden = true;
 document.body.append(cgStreetEl);
 let cgStreetT = 0, cgStreetLast = "";
-function cgPlate(a, b) {
-  const cv = document.createElement("canvas"), ctx = cv.getContext("2d");
-  ctx.font = "bold 30px Arial, sans-serif";
-  const wd = Math.ceil(Math.max(ctx.measureText(a).width, ctx.measureText(b).width)) + 28;
-  cv.width = wd; cv.height = 92;
-  ctx.font = "bold 30px Arial, sans-serif";
-  ctx.fillStyle = "#1d4f8f"; ctx.fillRect(0, 0, wd, 92);
-  ctx.strokeStyle = "#f2f2ea"; ctx.lineWidth = 3; ctx.strokeRect(4, 4, wd - 8, 84);
-  ctx.fillStyle = "#f6f4ec"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
-  ctx.fillText(a, wd / 2, 28); ctx.fillText(b, wd / 2, 64);
-  const tex = new THREE.CanvasTexture(cv);
-  const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, depthWrite: false }));
-  s.scale.set((wd / 92) * 1.15, 1.15, 1);
-  return s;
-}
 function updateStreetHud(dt) {
   const w = _0x3832da, p = _0x433a74;
   if (!w || _0x5cdc94.state !== "play" || !p || w.pk) { cgStreetEl.hidden = true; return; }
@@ -817,29 +802,6 @@ function updateStreetHud(dt) {
   const txt = inside ? "" : cgStreetAt(p.x, p.z);
   if (txt !== cgStreetLast) { cgStreetLast = txt; cgStreetEl.textContent = txt; }
   cgStreetEl.hidden = !txt;
-  // placas azuis nas esquinas próximas (no máximo 4 ativas)
-  const plates = w.cgPlates || (w.cgPlates = new Map()), L = cgLines(), active = new Set();
-  if (!inside && Math.abs(p.x) < _0xb211df + 4 && Math.abs(p.z) < _0xb211df + 4) {
-    const cand = [];
-    for (let i = 0; i < L.n; i++) for (let j = 0; j < L.n; j++) {
-      const d = Math.hypot(L.at(i) - p.x, L.at(j) - p.z);
-      if (d < 26) cand.push([d, i, j]);
-    }
-    cand.sort((a, b) => a[0] - b[0]);
-    for (const [, i, j] of cand.slice(0, 4)) {
-      const key = i + "," + j;
-      active.add(key);
-      if (!plates.has(key)) {
-        const s = cgPlate(L.ns(i), L.lo(j)), o = _0x2d5fe5 / 2 + 0.6;
-        const sx = i < L.n - 1 ? 1 : -1, sz = j < L.n - 1 ? 1 : -1;
-        s.position.set(L.at(i) + sx * o, 3.4, L.at(j) + sz * o);
-        w.group.add(s);
-        plates.set(key, s);
-      }
-    }
-  }
-  for (const [key, s] of plates)
-    if (!active.has(key)) { w.group.remove(s); s.material.map.dispose(); s.material.dispose(); plates.delete(key); }
 }
 function cgDrawMapStreets(ctx, sc) {
   if (!_0x3832da) return;
